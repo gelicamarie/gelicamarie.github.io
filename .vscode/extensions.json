@@ -1,0 +1,9 @@
+{
+  "recommendations": [
+    "dbaeumer.vscode-eslint",
+    "bradlc.vscode-tailwindcss",
+    "esbenp.prettier-vscode",
+    "ms-vsliveshare.vsliveshare",
+    "christian-kohler.npm-intellisense",
+  ]
+}

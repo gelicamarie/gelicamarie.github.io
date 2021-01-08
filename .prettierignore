@@ -1,0 +1,8 @@
+.cache/
+node_modules/
+public/
+**/*.js
+**/*.jsx
+package-lock.json
+!tailwind.config.js
+!gastby-*.js
