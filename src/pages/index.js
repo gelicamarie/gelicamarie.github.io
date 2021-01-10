@@ -1,20 +1,31 @@
 import React from 'react'
+import { Link } from 'gatsby'
 import About from '../components/About'
+import Exp from '../components/Exp'
+import Project from '../components/Project'
+import Contacts from '../components/Contacts'
+import Links from '../components/Links'
 
 const home = () => (
   <main>
 
     <div className="h-screen">
-      <p className="text-right text-theme-white text-sm mr-3">art.</p>
+      <p className="text-right text-theme-white text-sm mr-3">
+        <Link to="/art">art.</Link>
+      </p>
       <div className="h-screen flex items-center flex-row-reverse mr-6 md:mr-12 xl:mr-28">
         <div className="flex-col">
-          <h2 className="text-theme-orange text-3xl">Angelica Turla</h2>
-          <p className="text-theme-white ml-20 -m-3 text-sm">Student & Programmer</p>
+          <h2 className="text-theme-orange text-4xl">Angelica Turla</h2>
+          <p className="text-theme-white ml-24 -m-3 text-base">Student & Programmer</p>
+          <Links />
         </div>
       </div>
     </div>
 
     <About />
+    <Exp />
+    <Project />
+    <Contacts />
 
   </main>
 )
