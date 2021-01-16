@@ -13,10 +13,11 @@ const home = () => (
       <p className="text-right text-theme-white text-sm mr-3">
         <Link to="/art">art.</Link>
       </p>
-      <div className="h-screen flex items-center flex-row-reverse mr-6 md:mr-12 xl:mr-28">
-        <div className="flex-col">
+
+      <div className="flex h-screen flex-col mr-6 md:mr-12 xl:mr-28">
+        <div className="my-auto flex flex-col items-end">
           <h2 className="text-theme-orange text-4xl">Angelica Turla</h2>
-          <p className="text-theme-white ml-24 -m-3 text-base">Student & Programmer</p>
+          <p className="text-theme-white -mt-2 text-base">Student & Programmer</p>
           <Links />
         </div>
       </div>
@@ -31,3 +32,4 @@ const home = () => (
 )
 
 export default home
+
