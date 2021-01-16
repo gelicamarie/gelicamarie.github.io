@@ -13,11 +13,11 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        name: 'images',
-        path: './src/images/',
+        name: 'content',
+        path: `${__dirname}/src/content`,
       },
-      __key: 'images',
     },
+    'gatsby-transformer-remark',
     {
       resolve: 'gatsby-plugin-postcss',
       options: {
