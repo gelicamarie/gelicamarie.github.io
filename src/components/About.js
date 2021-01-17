@@ -22,7 +22,7 @@ const About = () => {
           <br />
         </p>
 
-        <HTMLContent className="text-theme-black font-extralight leading-4 text-sm lg:text-lg max-w-3xl">
+        <HTMLContent className="text-theme-black font-extralight leading-4 text-sm lg:text-lg max-w-5xl">
           {data}
         </HTMLContent>
 

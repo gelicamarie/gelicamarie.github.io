@@ -12,5 +12,4 @@ I absolutely love problem solving which was what gravitated me towards this fiel
 
 I also love being creative and seeing my ideas come to life.
 
-On my free time, when I am not thinking of solutions for some bug, I spend my time drawing and contemplating the
-meaning of life
+On my free time, I spend my time drawing and contemplating the meaning of life :)
