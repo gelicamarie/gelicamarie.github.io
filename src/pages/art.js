@@ -1,25 +1,30 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import ArtGrid from '../components/ArtGrid'
 
-const art = () => (
-  <main>
+const Art = () => (
+  <main className="h-screen">
+    <p className="text-right text-theme-white text-sm mr-3">
+      <Link to="/">Angelica Turla.</Link>
+    </p>
 
-    <div className="h-screen">
-      <p className="text-right text-theme-white text-sm mr-3">
-        <Link to="/">Angelica Turla.</Link>
-      </p>
-      <div className="flex items-center flex-row-reverse mr-6 md:mr-12 xl:mr-28">
+    <div className="mr-6 md:mr-12 xl:mr-28 flex flex-col">
 
-        <h2 className="mt-8 text-theme-orange text-right text-4xl">
-          i draw,
-          <br />
-          sometimes.
-        </h2>
+      <h2 className="mt-8 text-theme-orange text-right text-4xl">
+        i draw,
+        <br />
+        sometimes.
+      </h2>
 
+      <div className="ml-6 py-6">
+        <div className="flex flex-col max-w-7xl mx-auto">
+          <ArtGrid />
+        </div>
       </div>
+
     </div>
 
   </main>
 )
 
-export default art
+export default Art
