@@ -1,6 +1,8 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
+
 import Container from './Container'
+import HTMLContent from './HTMLContent'
 
 const About = () => {
   const { markdownRemark: { html: data } } = useStaticQuery( graphql`
@@ -20,10 +22,7 @@ const About = () => {
           <br />
         </p>
 
-        <p
-          className="text-theme-black font-extralight leading-4 text-sm lg:text-lg max-w-3xl"
-          dangerouslySetInnerHTML={{ __html: data }}
-        />
+        <HTMLContent className="text-theme-black font-extralight leading-4 text-sm lg:text-lg max-w-3xl" children={data} />
 
       </Container>
     </div>
