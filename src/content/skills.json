@@ -1,0 +1,20 @@
+{
+  "values": [
+    {
+      "heading": "Languages",
+      "body": "JavaScript, Java, Python, C, CSS3, HTML5, Swift, Scratch"
+    },
+    {
+      "heading": "Frameworks",
+      "body": "NodeJS, React, TailwindCSS, GatsbyJS"
+    },
+    {
+      "heading": "Data Stores",
+      "body": "MongoDB, SQLite"
+    },
+    {
+      "heading": "Tools",
+      "body": "Git, Github Actions, Linux, MacOS, Windows"
+    }
+  ]
+}
