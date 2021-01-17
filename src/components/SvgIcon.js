@@ -24,7 +24,7 @@ SvgIcon.propTypes = {
 
 SvgIcon.defaultProps = {
   className: undefined,
-  size: 18,
+  size: 25,
 }
 
 export default SvgIcon
