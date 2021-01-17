@@ -1,9 +1,12 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import ArtGrid from '../components/ArtGrid'
+import SEO from '../components/Seo'
 
 const Art = () => (
   <main className="h-screen">
+    <SEO title="Art" />
+
     <p className="text-right text-theme-white text-sm lg:text-lg mr-3">
       <Link to="/">Angelica Turla.</Link>
     </p>

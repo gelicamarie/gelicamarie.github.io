@@ -6,9 +6,11 @@ import Exp from '../components/Exp'
 import Project from '../components/Project'
 import Contacts from '../components/Contacts'
 import Links from '../components/Links'
+import SEO from '../components/Seo'
 
 const Home = () => (
   <main>
+    <SEO title="Home" />
 
     <div className="h-screen">
       <p className="text-right text-theme-white text-sm lg:text-lg mr-3">

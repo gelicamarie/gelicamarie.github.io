@@ -4,7 +4,9 @@ const tailwindConfig = require( './tailwind.config.js' )
 
 module.exports = {
   siteMetadata: {
-    title: 'angelica',
+    title: 'Angelica Turla',
+    description: 'Personal Portfolio',
+    author: '@gelicamarie',
   },
   plugins: [
     'gatsby-plugin-sharp',
