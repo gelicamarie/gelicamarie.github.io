@@ -4,7 +4,7 @@ import ArtGrid from '../components/ArtGrid'
 
 const Art = () => (
   <main className="h-screen">
-    <p className="text-right text-theme-white text-sm mr-3">
+    <p className="text-right text-theme-white text-sm lg:text-lg mr-3">
       <Link to="/">Angelica Turla.</Link>
     </p>
 

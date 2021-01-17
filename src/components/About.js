@@ -15,13 +15,13 @@ const About = () => {
   return (
     <div className="bg-theme-orange py-6 md:py-8">
       <Container>
-        <p className="text-white font-semibold text-xl">
+        <p className="text-white font-semibold text-xl lg:text-3xl">
           Hi there! I'm Angelica, Gel for short.
           <br />
         </p>
 
         <p
-          className="text-theme-black font-extralight leading-4 text-sm max-w-3xl"
+          className="text-theme-black font-extralight leading-4 text-sm lg:text-lg max-w-3xl"
           dangerouslySetInnerHTML={{ __html: data }}
         />
 

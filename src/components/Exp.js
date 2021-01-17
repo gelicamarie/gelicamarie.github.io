@@ -3,9 +3,10 @@ import { string } from 'prop-types'
 import cx from 'classnames'
 
 import Container from './Container'
+import SKILLS from '../content/skills.json'
 
 const Heading = ( { label, className, ...props } ) => (
-  <h2 className={cx( 'text-theme-orange text-lg', className )} {...props}>{label}</h2>
+  <h2 className={cx( 'text-theme-orange text-lg lg:text-2xl', className )} {...props}>{label}</h2>
 )
 
 Heading.propTypes = {
@@ -31,7 +32,7 @@ SectionItem.propTypes = {
 
 const Exp = () => (
   <Container>
-    <div className="grid grid-cols-3 gap-4 py-6 md:py-8 text-theme-white text-xs font-extralight">
+    <div className="grid grid-cols-3 gap-4 py-6 md:py-8 text-theme-white text-xs lg:text-base font-extralight">
 
       <div>
         <Heading label="Experience" />
@@ -54,10 +55,7 @@ const Exp = () => (
 
       <div>
         <Heading label="Skills" />
-        <SectionItem heading="Languages" body="JavaScript, Java, Python, C, CSS3, HTML5, Swift, Scratch" />
-        <SectionItem heading="Frameworks" body="NodeJS, React, TailwindCSS, GatsbyJS" />
-        <SectionItem heading="Data Stores" body="MongoDB, SQLite" />
-        <SectionItem heading="Tools" body="Git, Github Actions, Linux, MacOS, Windows" />
+        {SKILLS.values.map( item => <SectionItem key={item.heading} {...item} /> )}
       </div>
 
     </div>
