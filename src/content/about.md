@@ -3,6 +3,7 @@ title: About Section
 ---
 
 I am a programmer currently on my 2nd year of Computer Science at Carleton University in Canada.
+
 Still finding my footing in the vast world of Programming and so I always
 
 keep an open mind when it comes to learning new things.
