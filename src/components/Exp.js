@@ -31,7 +31,7 @@ SectionItem.propTypes = {
 
 const Exp = () => (
   <Container>
-    <div className="grid grid-cols-3 gap-4 my-4 text-theme-white text-xs font-extralight">
+    <div className="grid grid-cols-3 gap-4 py-6 md:py-8 text-theme-white text-xs font-extralight">
 
       <div>
         <Heading label="Experience" />
@@ -39,9 +39,11 @@ const Exp = () => (
         <p className="max-w-md">
           <span className="text-theme-orange">Lead Programmer</span>
           <br />
-          Developed an application called Commnuity Companion using MIT App Inventor.
-          The purpose of the app was to help immigrants and new comers integrate into the community more efficiently by providing
-          an application that present a wide variety of oppurtunities such as: clubs, volunteering oppurtunities, and many more, to its users.
+          Developed an application called Community Companion using MIT App Inventor.
+          The purpose of the app was to help immigrants and new comers integrate into
+          the community more efficiently by providing
+          an application that present a wide variety of opportunities
+          such as: clubs, volunteering opportunities, and many more, to its users.
         </p>
       </div>
 

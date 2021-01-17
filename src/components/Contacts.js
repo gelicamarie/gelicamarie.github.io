@@ -2,7 +2,7 @@ import React from 'react'
 import Container from './Container'
 
 const Contacts = () => (
-  <div className="text-theme-orange py-4">
+  <div className="text-theme-orange py-6 md:py-8">
     <Container>
       <h2>Contacts</h2>
       <p className="ml-4 text-theme-white text-sm">
