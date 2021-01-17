@@ -3,9 +3,9 @@ title: About Section
 ---
 
 I am a programmer currently on my 2nd year of Computer Science at Carleton University in Canada.
-Still finding my footing in the vast world of Programming and so
+Still finding my footing in the vast world of Programming and so I always
 
-I always keep an open mind to learning new things.
+keep an open mind when it comes to learning new things.
 
 I absolutely love problem solving which was what gravitated me towards this field.
 
