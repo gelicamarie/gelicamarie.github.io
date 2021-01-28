@@ -3,6 +3,7 @@ import { AiFillLinkedin } from '@react-icons/all-files/ai/AiFillLinkedin'
 import { AiFillTwitterCircle } from '@react-icons/all-files/ai/AiFillTwitterCircle'
 import { AiOutlineMail } from '@react-icons/all-files/ai/AiOutlineMail'
 import { TiSocialInstagramCircular } from '@react-icons/all-files/ti/TiSocialInstagramCircular'
+import { RiSpotifyFill } from '@react-icons/all-files/ri/RiSpotifyFill'
 
 const SOCIAL_PROFILES = [
   {
@@ -24,6 +25,10 @@ const SOCIAL_PROFILES = [
   {
     url: 'https://www.instagram.com/gelica.marie',
     icon: TiSocialInstagramCircular,
+  },
+  {
+    url: 'https://open.spotify.com/user/_gelicaaaaa_',
+    icon: RiSpotifyFill,
   },
 ]
 
