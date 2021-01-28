@@ -7,7 +7,7 @@ module.exports = {
         theme: {
           black: '#212121',
           orange: '#CC8747',
-          'orange-dark': '#C6752A',
+          'orange-dark': '#E1954E',
           white: '#FFFFFF',
         },
       },
