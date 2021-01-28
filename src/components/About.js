@@ -15,7 +15,7 @@ const About = () => {
 ` )
 
   return (
-    <div className="bg-theme-orange-dark md:bg-theme-orange py-6 md:py-8">
+    <div className="bg-theme-orange py-6 md:py-8">
       <Container>
         <p className="text-white font-semibold text-xl lg:text-3xl">
           Hi there! I&apos;m Angelica, Gel for short.
