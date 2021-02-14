@@ -4,7 +4,6 @@ import cx from 'classnames'
 import { useStaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 
-import { GiHammerNails } from '@react-icons/all-files/gi/GiHammerNails'
 import Container from './Container'
 
 const Heading = ( { label, className, ...props } ) => (
