@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+  --color-theme-black: #131517;
+  --color-theme-white: #e9e5da;
+  --color-theme-grey-0: #757070;
+  --color-theme-grey-1: #c4c4c4;
+  --color-theme-grey-2: #2c2a2a;
+  --color-theme-blue-0: #40505f;
+  --color-theme-blue-1: #93acc3;
+  --color-theme-blue-2: #586e82;
+  --color-theme-blue-3: #232c35;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Public Sans', sans-serif;
+  font-size: 16px;
+  background-color: var(--color-theme-black);
+  color: var(--color-theme-white);
+  letter-spacing: 0.07rem;
+}
+
+a {
+  color: var(--color-theme-white);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--color-theme-blue-2);
+}
+
+/* Tablets */
+@media only screen and (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
