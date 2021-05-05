@@ -1,24 +1,68 @@
-import React from 'react'
-import { Helmet } from 'react-helmet'
-import { useStaticQuery, graphql } from 'gatsby'
-import { string, arrayOf } from 'prop-types'
+import { graphql, useStaticQuery } from 'gatsby'
+import { Helmet, HelmetProps } from 'react-helmet'
 
-const SEO = ( { description, lang, meta, title } ) => {
-  const { site } = useStaticQuery(
-    graphql`
-      query {
-        site {
-          siteMetadata {
-            title
-            description
-            author
-          }
-        }
+type SeoProps = {
+
+  /**
+   * Title of the object
+   */
+  title: string,
+
+  /**
+   * A one to two sentence description.
+   */
+  description?: string,
+
+  /**
+   * Language of page
+   * Default: en
+   */
+  lang?: string,
+
+  /**
+   * List of keywords helps to search content helps search engines
+   */
+  keywords?: [string],
+} & HelmetProps
+
+const Seo = ( { description, meta = [], lang = 'en', keywords, title, ...props }:SeoProps ) => {
+  const { site } = useStaticQuery<GatsbyTypes.SeoMetadataQuery>( graphql`
+    query SeoMetadata {
+    site {
+      siteMetadata {
+        title
+        description
       }
-    `,
-  )
+    }
+  }
+  ` )
 
-  const metaDescription = description || site.siteMetadata.description
+  const metaDescription = description || site?.siteMetadata?.description
+  const metaTitle = site?.siteMetadata?.title || title
+
+  const metaTags = [
+    {
+      name: 'description',
+      content: metaDescription,
+    },
+    {
+      property: 'og:title',
+      content: title,
+    },
+    {
+      property: 'og:description',
+      content: metaDescription,
+    },
+    {
+      property: 'og:type',
+      content: 'website',
+    },
+  ] as HelmetProps['meta']
+
+  const keywordTag = keywords && keywords.length > 0 ? {
+    name: 'keywords',
+    content: keywords.join( ', ' ),
+  } : []
 
   return (
     <Helmet
@@ -26,56 +70,11 @@ const SEO = ( { description, lang, meta, title } ) => {
         lang,
       }}
       title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
-      meta={[
-        {
-          name: 'description',
-          content: metaDescription,
-        },
-        {
-          property: 'og:title',
-          content: title,
-        },
-        {
-          property: 'og:description',
-          content: metaDescription,
-        },
-        {
-          property: 'og:type',
-          content: 'website',
-        },
-        {
-          name: 'twitter:card',
-          content: 'summary',
-        },
-        {
-          name: 'twitter:creator',
-          content: site.siteMetadata.author,
-        },
-        {
-          name: 'twitter:title',
-          content: title,
-        },
-        {
-          name: 'twitter:description',
-          content: metaDescription,
-        },
-      ].concat( meta )}
+      titleTemplate={`%s | ${metaTitle}`}
+      meta={metaTags?.concat( meta ).concat( keywordTag )}
+      {...props}
     />
   )
 }
 
-SEO.propTypes = {
-  description: string,
-  lang: string,
-  meta: arrayOf( string ),
-  title: string.isRequired,
-}
-
-SEO.defaultProps = {
-  description: undefined,
-  lang: 'en',
-  meta: [],
-}
-
-export default SEO
+export default Seo

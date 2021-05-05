@@ -66,6 +66,9 @@
       {
         "beforeLineComment": true
       }
-    ]
+    ],
+    // Use the new JSX transform React v17
+    "react/jsx-uses-react": "off",
+    "react/react-in-jsx-scope": "off"
   }
 }
