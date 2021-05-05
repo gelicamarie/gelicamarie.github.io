@@ -1,7 +1,3 @@
-/* eslint-disable import/no-extraneous-dependencies */
-/* eslint-disable global-require */
-const tailwindConfig = require( './tailwind.config.js' )
-
 module.exports = {
   siteMetadata: {
     title: 'Angelica Turla',
@@ -20,23 +16,5 @@ module.exports = {
       },
     },
     'gatsby-transformer-remark',
-    {
-      resolve: 'gatsby-plugin-postcss',
-      options: {
-        postCssPlugins: [
-          require( 'tailwindcss' )( tailwindConfig ),
-          require( 'autoprefixer' ),
-          ...( process.env.NODE_ENV === 'production'
-            ? [ require( 'cssnano' ) ]
-            : [] ),
-        ],
-      },
-    },
-    {
-      resolve: 'gatsby-plugin-purgecss',
-      options: {
-        tailwind: true,
-      },
-    },
   ],
 }
