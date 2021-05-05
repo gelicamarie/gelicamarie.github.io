@@ -15,9 +15,11 @@ const MENU = [
   { label: 'Contact', to: '/#contact' },
 ]
 
-type NavItemsProps = DetailedHTMLProps<HTMLAttributes<HTMLUListElement>, HTMLUListElement>
+type NavItemsProps = {
+  closeNav: () => void
+} & DetailedHTMLProps<HTMLAttributes<HTMLUListElement>, HTMLUListElement>
 
-const NavItems = ( { ...props }:NavItemsProps ) => (
+const NavItems = ( { closeNav, ...props }:NavItemsProps ) => (
   <ul {...props}>
     {MENU.map( ( { label, to } ) => (
       <motion.li
@@ -25,7 +27,7 @@ const NavItems = ( { ...props }:NavItemsProps ) => (
         whileTap={{ scale: 0.9 }}
         key={label}
       >
-        <Link to={to}>{label}</Link>
+        <Link onClick={closeNav} to={to}>{label}</Link>
       </motion.li>
     ) )}
   </ul>
@@ -47,15 +49,18 @@ const transitionStyles = {
 
 type MobileNavProps = {
   isOpen: boolean;
+  closeNav: () => void;
 }
 
-const MobileNav = ( { isOpen }:MobileNavProps ) => (
+const MobileNav = ( { isOpen, closeNav }:MobileNavProps ) => (
   <Transition in={isOpen} timeout={duration}>
     {state => (
-      <NavItems style={{
-        ...defaultStyle,
-        ...transitionStyles[ state ],
-      }}
+      <NavItems
+        style={{
+          ...defaultStyle,
+          ...transitionStyles[ state ],
+        }}
+        closeNav={closeNav}
       />
     )}
   </Transition>
@@ -65,8 +70,11 @@ const Navbar = () => {
   const [ isOpen, setOpen ] = useState( false )
   const width = useWindowWidth()
   const isMobile = width < 768
-
-  const Items = () => ( isMobile ? <MobileNav isOpen={isOpen} /> : <NavItems /> )
+  const toggle = () => setOpen( !isOpen )
+  const Items = () => ( isMobile
+    ? <MobileNav closeNav={toggle} isOpen={isOpen} />
+    : <NavItems closeNav={toggle} />
+  )
 
   return (
     <nav>
@@ -75,10 +83,9 @@ const Navbar = () => {
           Angelica Turla
           <p>Ottawa, Canada</p>
         </div>
-        {isMobile && <Toggle size={18} toggled={isOpen} toggle={() => setOpen( !isOpen )} />}
+        {isMobile && <Toggle size={18} toggled={isOpen} toggle={toggle} />}
       </div>
       <Items />
-
     </nav>
   )
 }

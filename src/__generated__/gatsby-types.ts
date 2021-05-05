@@ -1018,7 +1018,7 @@ type ImageFormat =
 
 type ImageLayout =
   | 'fixed'
-  | 'fluid'
+  | 'fullWidth'
   | 'constrained';
 
 type ImagePlaceholder =
@@ -1142,23 +1142,23 @@ type ImageSharp_sizesArgs = {
 
 type ImageSharp_gatsbyImageDataArgs = {
   layout?: Maybe<ImageLayout>;
-  maxWidth: Maybe<Scalars['Int']>;
-  maxHeight: Maybe<Scalars['Int']>;
   width: Maybe<Scalars['Int']>;
   height: Maybe<Scalars['Int']>;
-  placeholder?: Maybe<ImagePlaceholder>;
+  aspectRatio: Maybe<Scalars['Float']>;
+  placeholder: Maybe<ImagePlaceholder>;
   blurredOptions: Maybe<BlurredOptions>;
   tracedSVGOptions: Maybe<Potrace>;
-  formats?: Maybe<ReadonlyArray<Maybe<ImageFormat>>>;
+  formats: Maybe<ReadonlyArray<Maybe<ImageFormat>>>;
   outputPixelDensities: Maybe<ReadonlyArray<Maybe<Scalars['Float']>>>;
-  sizes?: Maybe<Scalars['String']>;
+  breakpoints: Maybe<ReadonlyArray<Maybe<Scalars['Int']>>>;
+  sizes: Maybe<Scalars['String']>;
   quality: Maybe<Scalars['Int']>;
   jpgOptions: Maybe<JPGOptions>;
   pngOptions: Maybe<PNGOptions>;
   webpOptions: Maybe<WebPOptions>;
   avifOptions: Maybe<AVIFOptions>;
   transformOptions: Maybe<TransformOptions>;
-  background?: Maybe<Scalars['String']>;
+  backgroundColor: Maybe<Scalars['String']>;
 };
 
 
@@ -2136,6 +2136,7 @@ type Query_sitePluginArgs = {
   version: Maybe<StringQueryOperatorInput>;
   pluginOptions: Maybe<SitePluginPluginOptionsFilterInput>;
   nodeAPIs: Maybe<StringQueryOperatorInput>;
+  browserAPIs: Maybe<StringQueryOperatorInput>;
   ssrAPIs: Maybe<StringQueryOperatorInput>;
   pluginFilepath: Maybe<StringQueryOperatorInput>;
   packageJson: Maybe<SitePluginPackageJsonFilterInput>;
@@ -2658,6 +2659,7 @@ type SitePageFieldsEnum =
   | 'pluginCreator.pluginOptions.isTSX'
   | 'pluginCreator.pluginOptions.jsxPragma'
   | 'pluginCreator.nodeAPIs'
+  | 'pluginCreator.browserAPIs'
   | 'pluginCreator.ssrAPIs'
   | 'pluginCreator.pluginFilepath'
   | 'pluginCreator.packageJson.name'
@@ -2718,6 +2720,7 @@ type SitePlugin = Node & {
   readonly version: Maybe<Scalars['String']>;
   readonly pluginOptions: Maybe<SitePluginPluginOptions>;
   readonly nodeAPIs: Maybe<ReadonlyArray<Maybe<Scalars['String']>>>;
+  readonly browserAPIs: Maybe<ReadonlyArray<Maybe<Scalars['String']>>>;
   readonly ssrAPIs: Maybe<ReadonlyArray<Maybe<Scalars['String']>>>;
   readonly pluginFilepath: Maybe<Scalars['String']>;
   readonly packageJson: Maybe<SitePluginPackageJson>;
@@ -2852,6 +2855,7 @@ type SitePluginFieldsEnum =
   | 'pluginOptions.isTSX'
   | 'pluginOptions.jsxPragma'
   | 'nodeAPIs'
+  | 'browserAPIs'
   | 'ssrAPIs'
   | 'pluginFilepath'
   | 'packageJson.name'
@@ -2880,6 +2884,7 @@ type SitePluginFilterInput = {
   readonly version: Maybe<StringQueryOperatorInput>;
   readonly pluginOptions: Maybe<SitePluginPluginOptionsFilterInput>;
   readonly nodeAPIs: Maybe<StringQueryOperatorInput>;
+  readonly browserAPIs: Maybe<StringQueryOperatorInput>;
   readonly ssrAPIs: Maybe<StringQueryOperatorInput>;
   readonly pluginFilepath: Maybe<StringQueryOperatorInput>;
   readonly packageJson: Maybe<SitePluginPackageJsonFilterInput>;

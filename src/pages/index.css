@@ -1,0 +1,156 @@
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.wrapper {
+  display: grid;
+  place-items: center;
+  height: calc(100vh - 10rem);
+  width: 100vw;
+}
+
+main h1 {
+  margin: 0;
+  text-align: center;
+}
+
+main div.name {
+  display: flex;
+  width: 100%;
+}
+
+main div.collage-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.collage {
+  margin: 8rem 0 2rem 0;
+  width: 40%;
+}
+
+@media only screen and (min-width: 600px) {
+  main div.name .line {
+    width: 25%;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .collage {
+    margin: 8rem 0 2rem 0;
+    width: 70%;
+  }
+
+  .collage img {
+    z-index: -1;
+  }
+
+  main div.name {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  main div.name .line {
+    width: 3rem;
+  }
+}
+
+/* Desktop Medium */
+@media only screen and (min-width: 768px) {
+  .collage-wrapper {
+    margin-left: 20rem;
+  }
+  .collage {
+    margin: 8rem 0 -10rem;
+    width: 100%;
+  }
+  main div.name {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  main h1 {
+    font-size: 2.3rem;
+  }
+  main .name > h1 {
+    position: relative;
+  }
+
+  main .line {
+    width: 5rem;
+  }
+  main .name > h1 > svg.circle {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    top: -6rem;
+    left: 0;
+    z-index: -1;
+  }
+}
+
+@media only screen and (min-width: 1100px) {
+  .collage {
+    margin: 3rem 0;
+    width: 100%;
+  }
+  main h1 {
+    font-size: 3rem;
+    margin: 0 -2rem;
+    letter-spacing: 0.3rem;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .collage {
+    margin: 5rem 0 -2rem;
+    width: 100%;
+  }
+
+  main h1 {
+    font-size: 3.5rem;
+    margin: 0 -4rem;
+  }
+}
+
+@media only screen and (min-width: 1700px) {
+  .collage {
+    margin: 7rem 0 -3rem 10rem;
+    width: 25rem;
+    height: 30rem;
+  }
+
+  main h1 {
+    font-size: 3.5rem;
+    margin: 0 -3rem;
+  }
+
+  main .name > h1 > svg.circle {
+    width: 250px;
+    height: 250px;
+    top: -8rem;
+  }
+}
+
+@media only screen and (min-width: 2000px) {
+  .collage {
+    margin: 7rem 0 -8rem 0;
+    width: 30rem;
+    height: 35rem;
+  }
+
+  main h1 {
+    font-size: 5rem;
+    margin: 0 -3rem;
+    letter-spacing: 0.5rem;
+  }
+
+  main .name > h1 > svg.circle {
+    width: 300px;
+    height: 300px;
+    top: -8rem;
+  }
+}
