@@ -1,10 +1,10 @@
-import { useState } from 'react'
-import type { HTMLAttributes, DetailedHTMLProps } from 'react'
+import { useState, useEffect } from 'react'
 import { Cross as Toggle } from 'hamburger-react'
 import { Link } from 'gatsby'
 import { useWindowWidth } from '@react-hook/window-size'
 import { Transition } from 'react-transition-group'
 import { motion } from 'framer-motion'
+
 import './index.css'
 
 const MENU = [
@@ -14,24 +14,6 @@ const MENU = [
   { label: 'Work', to: '/#work' },
   { label: 'Contact', to: '/#contact' },
 ]
-
-type NavItemsProps = {
-  closeNav: () => void
-} & DetailedHTMLProps<HTMLAttributes<HTMLUListElement>, HTMLUListElement>
-
-const NavItems = ( { closeNav, ...props }:NavItemsProps ) => (
-  <ul {...props}>
-    {MENU.map( ( { label, to } ) => (
-      <motion.li
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.9 }}
-        key={label}
-      >
-        <Link onClick={closeNav} to={to}>{label}</Link>
-      </motion.li>
-    ) )}
-  </ul>
-)
 
 const duration = 1000
 
@@ -47,34 +29,45 @@ const transitionStyles = {
   exited: { opacity: 0 },
 }
 
-type MobileNavProps = {
+type NavItemProps = {
   isOpen: boolean;
   closeNav: () => void;
 }
 
-const MobileNav = ( { isOpen, closeNav }:MobileNavProps ) => (
+const NavItem = ( { isOpen, closeNav }:NavItemProps ) => (
   <Transition in={isOpen} timeout={duration}>
     {state => (
-      <NavItems
-        style={{
-          ...defaultStyle,
-          ...transitionStyles[ state ],
-        }}
-        closeNav={closeNav}
-      />
+      <ul style={{
+        ...defaultStyle,
+        ...transitionStyles[ state ],
+      }}
+      >
+        {MENU.map( ( { label, to } ) => (
+          <motion.li
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            key={label}
+          >
+            <Link onClick={closeNav} to={to}>{label}</Link>
+          </motion.li>
+        ) )}
+      </ul>
     )}
   </Transition>
 )
 
 const Navbar = () => {
   const [ isOpen, setOpen ] = useState( false )
-  const width = useWindowWidth()
+  const width = useWindowWidth( { initialWidth: 1000 } )
   const isMobile = width < 768
-  const toggle = () => setOpen( !isOpen )
-  const Items = () => ( isMobile
-    ? <MobileNav closeNav={toggle} isOpen={isOpen} />
-    : <NavItems closeNav={toggle} />
-  )
+  const closeNav = () => setOpen( false )
+  const openNav = () => setOpen( true )
+
+  useEffect( () => {
+    if ( !isMobile && !isOpen ) {
+      setOpen( true )
+    }
+  }, [ width ] )
 
   return (
     <nav>
@@ -83,9 +76,9 @@ const Navbar = () => {
           Angelica Turla
           <p>Ottawa, Canada</p>
         </div>
-        {isMobile && <Toggle size={18} toggled={isOpen} toggle={toggle} />}
+        {isMobile && <Toggle size={18} toggled={isOpen} toggle={() => setOpen( !isOpen )} />}
       </div>
-      <Items />
+      <NavItem closeNav={isMobile ? closeNav : openNav} isOpen={isOpen} />
     </nav>
   )
 }
