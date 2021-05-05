@@ -43,6 +43,7 @@ nav > ul {
     top: -0.1rem;
     right: -0.3rem;
     left: -0.1rem;
+    z-index: 2;
     background-color: var(--color-theme-blue-3);
   }
 
