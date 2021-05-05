@@ -3046,6 +3046,11 @@ type PagesQueryQueryVariables = Exact<{ [key: string]: never; }>;
 
 type PagesQueryQuery = { readonly allSitePage: { readonly nodes: ReadonlyArray<Pick<SitePage, 'path'>> } };
 
+type HomepageQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+type HomepageQuery = { readonly file: Maybe<{ readonly childImageSharp: Maybe<Pick<ImageSharp, 'gatsbyImageData'>> }> };
+
 type SeoMetadataQueryVariables = Exact<{ [key: string]: never; }>;
 
 
