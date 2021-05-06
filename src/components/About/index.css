@@ -50,7 +50,7 @@ main p {
   main .heading h3 {
     font-size: 1.5rem;
     position: absolute;
-    margin: 0 0 0 26rem;
+    margin: 0 0 0 15rem;
   }
 
   main .heading > h2 > svg.circle {
