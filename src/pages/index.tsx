@@ -7,6 +7,8 @@ import Navbar from '../components/Navbar'
 import Line from '../components/Line'
 import Ellipse from '../components/Ellipse'
 
+import About from '../components/About'
+
 import './index.css'
 
 const MobileName = () => (
@@ -54,6 +56,8 @@ const Home = () => {
           <Name />
         </div>
       </main>
+      <About />
+
     </>
   )
 }
