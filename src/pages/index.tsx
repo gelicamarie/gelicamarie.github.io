@@ -42,21 +42,20 @@ const Home = () => {
   }
   ` )
   const width = useWindowWidth()
-  const Name = () => ( width < 786 ? <MobileName /> : <DesktopName /> )
+  const Name = () => ( width < 769 ? <MobileName /> : <DesktopName /> )
 
   return (
     <>
       <SEO title="Home" />
       <Navbar />
-      <main>
-        <div className="wrapper">
+      <main className="wrapper">
+        <div className="mid-wrap">
           <div className="collage-wrapper">
             <GatsbyImage className="collage" alt="Collage" image={getImage( file )} />
           </div>
           <Name />
         </div>
       </main>
-      <About />
 
     </>
   )
