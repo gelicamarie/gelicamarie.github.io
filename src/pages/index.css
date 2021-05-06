@@ -31,15 +31,13 @@ main div.collage-wrapper {
   width: 40%;
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 320px) {
   main div.name .line {
-    width: 25%;
+    width: 12%;
   }
-}
 
-@media only screen and (max-width: 767px) {
   .collage {
-    margin: 8rem 0 2rem 0;
+    margin: 7rem 0 -7rem 0;
     width: 70%;
   }
 
@@ -52,19 +50,16 @@ main div.collage-wrapper {
     justify-content: space-between;
     align-items: center;
   }
-
-  main div.name .line {
-    width: 3rem;
-  }
 }
 
-/* Desktop Medium */
-@media only screen and (min-width: 768px) {
+@media only screen and (max-width: 785px) {
+}
+@media only screen and (min-width: 786px) {
   .collage-wrapper {
-    margin-left: 20rem;
+    margin-left: 15rem;
   }
   .collage {
-    margin: 8rem 0 -10rem;
+    margin: 5rem 0 1rem;
     width: 100%;
   }
   main div.name {
@@ -73,84 +68,113 @@ main div.collage-wrapper {
     align-items: center;
   }
   main h1 {
-    font-size: 2.3rem;
+    font-size: 2.5rem;
+    margin: 0 0.2rem;
   }
   main .name > h1 {
     position: relative;
   }
 
-  main .line {
-    width: 5rem;
+  main div.name .line {
+    width: 3rem;
   }
   main .name > h1 > svg.circle {
     position: absolute;
     width: 200px;
     height: 200px;
-    top: -6rem;
+    top: -8rem;
     left: 0;
     z-index: -1;
   }
 }
 
-@media only screen and (min-width: 1100px) {
+@media only screen and (min-width: 1025px) {
+  .collage-wrapper {
+    margin-left: 20rem;
+  }
   .collage {
-    margin: 3rem 0;
+    margin: 7rem 0 -0.1rem;
     width: 100%;
+  }
+  main div.name {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
   }
   main h1 {
     font-size: 3rem;
-    margin: 0 -2rem;
-    letter-spacing: 0.3rem;
+    margin: 0 1.5rem;
+  }
+  main .name > h1 {
+    position: relative;
+  }
+
+  main div.name .line {
+    width: 5rem;
   }
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1201px) {
   .collage {
     margin: 5rem 0 -2rem;
     width: 100%;
   }
 
+  main div.name .line {
+    width: 5rem;
+  }
   main h1 {
     font-size: 3.5rem;
-    margin: 0 -4rem;
+    margin: 0 1rem;
   }
 }
 
-@media only screen and (min-width: 1700px) {
+@media only screen and (min-width: 1920px) {
   .collage {
-    margin: 7rem 0 -3rem 10rem;
-    width: 25rem;
-    height: 30rem;
+    margin: 8rem 0 -3rem;
+  }
+
+  main div.name .line {
+    width: 5rem;
   }
 
   main h1 {
-    font-size: 3.5rem;
-    margin: 0 -3rem;
+    font-size: 4rem;
+    letter-spacing: 0.5rem;
+    margin: 0 2rem;
   }
 
   main .name > h1 > svg.circle {
-    width: 250px;
-    height: 250px;
-    top: -8rem;
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    top: -10rem;
+    left: 0;
+    z-index: -1;
   }
 }
 
 @media only screen and (min-width: 2000px) {
   .collage {
-    margin: 7rem 0 -8rem 0;
-    width: 30rem;
-    height: 35rem;
+    margin: 12rem 0 -10rem;
   }
 
-  main h1 {
+  main div.name .line {
+    width: 10rem;
+  }
+
+  main .name h1 {
     font-size: 5rem;
-    margin: 0 -3rem;
     letter-spacing: 0.5rem;
+    margin: 0 2rem;
   }
 
   main .name > h1 > svg.circle {
+    position: absolute;
     width: 300px;
     height: 300px;
-    top: -8rem;
+    top: -10rem;
+    left: 0;
+    z-index: -1;
   }
 }

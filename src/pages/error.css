@@ -1,0 +1,34 @@
+main {
+  height: var(--full-viewport-hero);
+}
+main h1 {
+  font-style: italic;
+}
+
+main h3 {
+  text-align: center;
+  font-weight: 300;
+}
+
+/* Small Screen Size */
+@media only screen and (max-width: 767px) {
+  main svg {
+    width: 20rem;
+    height: 25rem;
+  }
+}
+
+/* Desktop Medium */
+@media only screen and (min-width: 768px) {
+  main svg {
+    margin: 2rem 0;
+  }
+}
+
+@media only screen and (min-width: 2000px) {
+  main svg {
+    margin: 2rem 0;
+    width: 40rem;
+    height: 45rem;
+  }
+}
