@@ -1,0 +1,77 @@
+.container {
+  /* background-color: red; */
+}
+
+.heading {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+main h4 {
+  font-family: Georgia, 'Public Sans';
+  font-weight: 100;
+  font-style: italic;
+}
+
+main .heading > h2 > svg.circle {
+  position: absolute;
+  z-index: -1;
+}
+
+main .heading h3 {
+  margin: 0;
+  height: min-content;
+  transform-origin: 0 0;
+  transform: rotate(90deg);
+}
+
+@media only screen and (min-width: 320px) {
+  .heading {
+    padding: 0 1rem;
+  }
+
+  .heading h2 {
+    width: 70vw;
+    font-size: 7vw;
+  }
+
+  main .heading h3 {
+    position: absolute;
+    margin: 0 0 15vw 82vw;
+  }
+
+  main .heading > h2 > svg.circle {
+    width: 25vw;
+    height: 25vw;
+    top: 30vw;
+    left: 52vw;
+  }
+
+  main .grid-container {
+    margin: 0 2rem;
+  }
+}
+
+@media only screen and (min-width: 767) {
+  .heading h2 {
+    width: 90vw;
+    font-size: 6vw;
+  }
+
+  main .heading h3 {
+    position: absolute;
+    margin: 0 0 15vw 82vw;
+  }
+
+  main .heading > h2 > svg.circle {
+    width: 25vw;
+    height: 25vw;
+    top: 30vw;
+    left: 52vw;
+  }
+
+  main .grid-container {
+    margin: 0 2rem;
+  }
+}
