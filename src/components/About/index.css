@@ -1,21 +1,21 @@
-.heading {
+main.about .heading {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
 }
-main h2 {
+main.about h2 {
   text-transform: uppercase;
   padding: 0;
   text-align: left;
   font-weight: 400;
 }
 
-main .heading > svg.circle {
+main.about .heading > svg.circle {
   position: absolute;
   z-index: -1;
 }
 
-main h4 {
+main.about h4 {
   font-family: Georgia, 'Public Sans';
   letter-spacing: 0.2rem;
   font-weight: 100;
@@ -23,24 +23,24 @@ main h4 {
   font-size: 1.3em;
 }
 
-.info {
+main.about .info {
   margin: 0 2.5rem;
 }
 
-main p {
+main.about p {
   margin: 0;
   font-weight: 200;
 }
 
 @media only screen and (min-width: 320px) {
-  main h2 {
+  main.about h2 {
     font-size: 1.8rem;
     margin-left: 1rem;
     margin-right: auto;
     width: 11rem;
   }
 
-  main .heading > svg.circle {
+  main.about .heading > svg.circle {
     width: 100px;
     height: 100px;
     top: auto;
@@ -49,42 +49,42 @@ main p {
     margin: auto;
   }
 
-  main h4 {
+  main.about h4 {
     font-size: 1.3em;
   }
 
-  .grid-container {
+  main.about .grid-container {
     margin: 0 1rem;
   }
 
-  main p {
+  main.about p {
     font-size: 0.8rem;
     line-height: 1.2rem;
   }
 }
 @media only screen and (min-width: 481px) {
-  main .heading > svg.circle {
+  main.about .heading > svg.circle {
     width: 150px;
     height: 150px;
   }
 
-  main p {
+  main.about p {
     font-size: 1rem;
     line-height: 1.3rem;
   }
 }
 @media only screen and (min-width: 769px) {
-  main h2 {
+  main.about h2 {
     font-size: 3rem;
     width: 30rem;
   }
 
-  main .heading > svg.circle {
+  main.about .heading > svg.circle {
     width: 200px;
     height: 200px;
   }
 
-  .grid-container {
+  main.about .grid-container {
     margin-top: 2rem;
     display: grid;
     grid-template-columns: 18rem 18rem;
@@ -93,65 +93,65 @@ main p {
     grid-template-areas: '. .';
   }
 
-  main h4 {
+  main.about h4 {
     margin-top: 0;
     font-size: 1.7rem;
   }
 
-  main p {
+  main.about p {
     line-height: 1.7rem;
   }
 }
 
 @media only screen and (min-width: 1200px) {
-  main h2 {
+  main.about h2 {
     font-size: 4rem;
   }
 
-  .grid-container {
+  main.about .grid-container {
     grid-template-columns: 30em 30rem;
     gap: 0 4rem;
   }
 
-  main .heading > svg.circle {
+  main.about .heading > svg.circle {
     width: 250px;
     height: 250px;
   }
 
-  main p {
+  main.about p {
     font-size: 1.4rem;
     line-height: 1.9rem;
   }
 }
 
 @media only screen and (min-width: 1900px) {
-  main h4 {
+  main.about h4 {
     font-size: 3rem;
   }
-  main p {
+  main.about p {
     font-size: 1.8rem;
     line-height: 2.2rem;
     letter-spacing: 0.2rem;
   }
-  .grid-container {
+  main.about .grid-container {
     grid-template-columns: 35rem 35rem;
   }
 
-  main .heading > svg.circle {
+  main.about .heading > svg.circle {
     left: 65rem;
   }
 }
 
 @media only screen and (min-width: 2000px) {
-  main .heading h3 {
+  main.about .heading h3 {
     margin: 0 0 0 100rem;
   }
 
-  .grid-container {
+  main.about .grid-container {
     grid-template-columns: 45rem 45rem;
   }
 
-  main .heading > svg.circle {
+  main.about .heading > svg.circle {
     width: 300px;
     height: 300px;
     margin: 0 3rem;

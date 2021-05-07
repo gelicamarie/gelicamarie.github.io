@@ -9,6 +9,12 @@
   flex-direction: column;
 }
 
+.bkg {
+  position: fixed;
+  z-index: -1;
+  width: 20%;
+  opacity: 20%;
+}
 main div.name {
   display: flex;
   justify-content: center;
@@ -20,13 +26,21 @@ main div.name {
   main div.name .line {
     width: 14vw;
   }
-
+  .bkg {
+    width: 50%;
+    z-index: -2;
+  }
+  .bkg-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20vw 0 -10vw;
+  }
   .collage-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 70%;
-    margin: 10vw 0 -10vw;
   }
 
   .collage {
@@ -52,13 +66,16 @@ main div.name {
 
 @media only screen and (min-width: 481px) {
   main div.name .line {
-    width: 19vw;
+    width: 17vw;
     height: min-content;
     margin: 0 1rem;
   }
+
+  .bkg-wrapper {
+    margin: 20vw 0 0;
+  }
   .collage-wrapper {
-    width: 70%;
-    margin: 10vw 0 0;
+    width: 60%;
   }
 
   .collage img {
@@ -66,7 +83,7 @@ main div.name {
   }
 
   main div.name {
-    margin-top: 2rem;
+    margin-top: 8rem;
   }
 }
 
@@ -83,9 +100,15 @@ main div.name {
     width: 16vw;
   }
 
-  .collage-wrapper {
-    width: 50%;
+  .bkg {
+    width: 25%;
+    z-index: -2;
+  }
+  .bkg-wrapper {
     margin: 10vw 0 0;
+  }
+  .collage-wrapper {
+    width: 30%;
   }
 
   main .name > h1 {
@@ -110,10 +133,18 @@ main div.name {
   main .name h1 {
     font-size: 10rem;
   }
+
+  .bkg {
+    width: 20%;
+    z-index: -2;
+  }
+  .bkg-wrapper {
+    margin: 8vw 0 0;
+  }
+
   .collage-wrapper {
-    width: 80%;
-    height: 80%;
-    margin: 4vw 0 0;
+    width: 30%;
+    height: 30%;
   }
 
   .collage {
@@ -122,7 +153,7 @@ main div.name {
   }
 
   main div.name {
-    margin: 2rem;
+    margin: 2vw 0;
     height: fit-content;
     width: fit-content;
   }
@@ -146,14 +177,22 @@ main div.name {
     font-size: 4.5rem !important;
   }
 
-  .collage {
-    margin: 5vh 0 0 30rem;
-    width: 35rem;
-    height: 35rem;
+  .bkg {
+    width: 30rem;
+    z-index: -2;
   }
-  .collage img {
-    width: 30rem !important;
-    height: 35rem !important;
+  .bkg-wrapper {
+    margin: 5vw 0 0;
+  }
+
+  .collage-wrapper {
+    width: 40rem;
+    height: 40rem;
+  }
+
+  .collage {
+    height: fit-content;
+    width: fit-content;
   }
 
   main .name > h1 > svg.circle {
@@ -166,6 +205,6 @@ main div.name {
   }
 
   main div.name {
-    margin-top: 3vw;
+    margin-top: 2vw;
   }
 }

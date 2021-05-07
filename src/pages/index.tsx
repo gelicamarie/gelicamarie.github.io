@@ -8,6 +8,7 @@ import Line from '../components/Line'
 import Ellipse from '../components/Ellipse'
 
 import About from '../components/About'
+import Skills from '../components/Skills'
 
 import './index.css'
 
@@ -32,9 +33,14 @@ const DesktopName = () => (
 )
 
 const Home = () => {
-  const { file } = useStaticQuery<GatsbyTypes.HomepageQuery>( graphql`
+  const { collage, bkg } = useStaticQuery<GatsbyTypes.HomepageQuery>( graphql`
   query Homepage {
-    file(sourceInstanceName: {eq: "content"}, name: {eq: "collage"}) {
+    collage: file(sourceInstanceName: {eq: "content"}, name: {eq: "collage"}) {
+      childImageSharp {
+        gatsbyImageData(quality: 100, placeholder: TRACED_SVG)
+      }
+    }
+    bkg : file(sourceInstanceName: {eq: "content"}, name: {eq: "bkg"}) {
       childImageSharp {
         gatsbyImageData(quality: 100, placeholder: TRACED_SVG)
       }
@@ -48,15 +54,21 @@ const Home = () => {
     <>
       <SEO title="Home" />
       <Navbar />
-      <main className="wrapper">
-        <div className="mid-wrap">
-          <div className="collage-wrapper">
-            <GatsbyImage className="collage" alt="Collage" image={getImage( file )} />
+      <main>
+        <div className="wrapper">
+          <div className="mid-wrap">
+            <div className="bkg-wrapper">
+              <GatsbyImage className="bkg" alt="blue image" image={getImage( bkg )} />
+              <div className="collage-wrapper">
+                <GatsbyImage className="collage" alt="Collage" image={getImage( collage )} />
+              </div>
+            </div>
+            <Name />
           </div>
-          <Name />
         </div>
+        <About />
+        <Skills />
       </main>
-      <About />
     </>
   )
 }

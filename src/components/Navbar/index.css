@@ -63,6 +63,8 @@ nav > ul {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    position: fixed;
+    width: 95%;
   }
   nav > div {
     margin-right: 12rem;

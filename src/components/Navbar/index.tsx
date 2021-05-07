@@ -73,7 +73,7 @@ const Navbar = () => {
     <nav>
       <div>
         <div>
-          Angelica Turla
+          <Link to="/">Angelica Turla</Link>
           <p>Ottawa, Canada</p>
         </div>
         {isMobile && <Toggle size={18} toggled={isOpen} toggle={() => setOpen( !isOpen )} />}
