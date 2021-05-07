@@ -1,6 +1,6 @@
-
 import SEO from '../Seo'
 import Ellipse from '../Ellipse'
+import Line from '../Line'
 
 import './index.css'
 
