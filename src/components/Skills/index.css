@@ -1,0 +1,191 @@
+main.skills h1 {
+  position: relative;
+  text-align: right;
+  text-transform: uppercase;
+}
+
+main.skills h1 > svg.circle {
+  position: absolute;
+  z-index: -1;
+}
+
+main.skills .heading {
+  justify-items: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+main.skills .line {
+  width: 10vw;
+  margin-bottom: 2rem;
+}
+
+main.skills ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+  font-weight: 200;
+}
+
+[data-reach-accordion-panel] {
+  /* styles for all accordion panels */
+}
+[data-reach-accordion-panel][data-state='open'] {
+  /* styles for all open accordion panels */
+}
+[data-reach-accordion-panel][data-state='collapsed'] {
+  /* styles for all collapsed accordion panels */
+}
+[data-reach-accordion-panel][data-disabled] {
+  /* styles for all disabled accordion panels */
+}
+
+main.skills .tabs {
+  margin: 2vw 0;
+}
+[data-reach-accordion-button] {
+  font-size: 1.5rem;
+  cursor: pointer;
+  text-transform: lowercase;
+  font-style: italic;
+  letter-spacing: 0.1rem;
+  color: var(--color-theme-blue-1);
+  font-weight: 400;
+  background-color: transparent;
+  border: unset;
+}
+@media only screen and (min-width: 320px) {
+  main.skills .heading {
+    width: 100vw;
+    height: 20vw;
+    display: flex;
+  }
+  main.skills h1 {
+    font-size: 6vw;
+    width: min-content;
+    margin: 0 1vw 0 3vw;
+  }
+
+  main.skills .line {
+    width: 40vw;
+  }
+
+  main.skills h1 > svg.circle {
+    width: 20vw;
+    height: 20vw;
+    top: -8vw;
+    left: 18vw;
+  }
+
+  main.skills ul > li {
+    margin: 0.5rem 0.5rem 0 0;
+    font-size: 0.8rem;
+  }
+}
+
+@media only screen and (min-width: 481px) {
+  main.skills .heading {
+    margin-top: 4rem;
+  }
+  main.skills h1 {
+    font-size: 5.5vw;
+    margin: 0 2rem 0 0;
+  }
+
+  main.skills .line {
+    width: 50vw;
+  }
+  main.skills h1 > svg.circle {
+    width: 21vw;
+    height: 21vw;
+    top: -8vw;
+    left: 12vw;
+  }
+  main.skills ul > li {
+    margin: 0.5rem 0.5rem 0 0;
+    font-size: 0.9rem;
+  }
+
+  [data-reach-accordion-button] {
+    font-size: 1.7rem;
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  main.skills h1 {
+    font-size: 5vw;
+  }
+  main.skills ul > li {
+    font-size: 1rem;
+  }
+
+  main.skills .tabs {
+    margin: 0 0;
+  }
+  main.skills h1 > svg.circle {
+    width: 18vw;
+    height: 18vw;
+    top: -6vw;
+    left: 10vw;
+  }
+  [data-reach-accordion-button] {
+    font-size: 1.8rem;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  main.skills .heading {
+    max-width: 70vw;
+  }
+  [data-reach-accordion] {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  main.skills h1 {
+    font-size: 4rem;
+  }
+  main.skills .line {
+    width: 80vw;
+  }
+
+  main.skills h1 > svg.circle {
+    width: 16rem;
+    height: 16rem;
+    top: -8vw;
+    left: 10vw;
+  }
+
+  main.skills .tabs {
+    height: 20rem;
+    margin: -3rem 4rem 10rem 4rem;
+  }
+
+  [data-reach-accordion-button] {
+    font-size: 2rem;
+  }
+
+  main.skills ul > li {
+    margin: 0.8rem 0.9rem 0 0;
+    font-size: 1.2rem;
+  }
+}
+
+@media only screen and (min-width: 1900px) {
+  main.skills .tabs {
+    height: 20rem;
+    margin: -7rem 4rem 15rem 4rem;
+  }
+
+  main.skills h1 > svg.circle {
+    width: 16rem;
+    height: 16rem;
+    top: -6vw;
+    left: 8vw;
+  }
+  main.skills ul > li {
+    font-size: 1.5rem;
+  }
+}

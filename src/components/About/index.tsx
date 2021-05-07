@@ -1,13 +1,12 @@
 import SEO from '../Seo'
 import Ellipse from '../Ellipse'
-import Line from '../Line'
 
 import './index.css'
 
 const About = () => (
   <>
     <SEO title="About Me" />
-    <main id="about" className="container">
+    <main id="about" className="container about">
       <div className="heading">
         <h2>
           Computer Programmer

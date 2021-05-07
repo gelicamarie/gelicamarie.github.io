@@ -13,6 +13,7 @@
     "format": "run-s prettier lint:format"
   },
   "dependencies": {
+    "@reach/accordion": "^0.15.1",
     "@react-hook/window-size": "^3.0.7",
     "classnames": "^2.2.6",
     "framer-motion": "^4.1.11",
