@@ -1,13 +1,18 @@
-main {
-  height: var(--full-viewport-hero);
-}
 main h1 {
   font-style: italic;
+  text-align: center;
 }
 
 main h3 {
   text-align: center;
   font-weight: 300;
+}
+
+main .wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Small Screen Size */
