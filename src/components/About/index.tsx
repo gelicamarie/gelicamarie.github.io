@@ -11,9 +11,9 @@ const About = () => (
       <div className="heading">
         <h2>
           Computer Programmer
-          <Ellipse className="circle" />
         </h2>
-        <h3> developer</h3>
+        <Ellipse className="circle" />
+
       </div>
 
       <div className="grid-container">
@@ -27,6 +27,7 @@ const About = () => (
             <br />
           </p>
         </div>
+
         <div>
           <p>
             Still finding my footing in the vast world of technology and so I always

@@ -1,7 +1,5 @@
 .wrapper {
   height: calc(100vh - 5rem);
-  width: 100vw;
-  z-index: -2;
 }
 
 .mid-wrap {
