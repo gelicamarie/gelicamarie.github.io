@@ -57,12 +57,12 @@ const Home = () => {
       <main>
         <div className="wrapper">
           <div className="mid-wrap">
-            <div className="bkg-wrapper">
-              <GatsbyImage className="bkg" alt="blue image" image={getImage( bkg )} />
-              <div className="collage-wrapper">
-                <GatsbyImage className="collage" alt="Collage" image={getImage( collage )} />
-              </div>
+
+            <GatsbyImage className="bkg" alt="blue image" image={getImage( bkg )} />
+            <div className="collage-wrapper">
+              <GatsbyImage className="collage" alt="Collage" image={getImage( collage )} />
             </div>
+
             <Name />
           </div>
         </div>

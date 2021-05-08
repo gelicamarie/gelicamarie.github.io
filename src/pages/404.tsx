@@ -6,11 +6,13 @@ import './error.css'
 const Redirect = () => (
   <>
     <SEO title="Ooops" />
-    <main id="404" className="container">
-      <div className="wrapper">
-        <h1>Page not found</h1>
-        <Ooops />
-        <h3><Link to="/">Home</Link></h3>
+    <main id="404" className="error">
+      <div className="container">
+        <div className="wrapper">
+          <h1>Page not found</h1>
+          <Ooops />
+          <h3><Link to="/">Home</Link></h3>
+        </div>
       </div>
     </main>
 
