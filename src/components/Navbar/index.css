@@ -2,6 +2,7 @@ nav {
   display: flex;
   flex-direction: column;
   margin: 0.5rem 0.2rem 0 0.7rem;
+  z-index: 2;
 }
 
 nav > div {

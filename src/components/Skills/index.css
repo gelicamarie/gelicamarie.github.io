@@ -55,6 +55,10 @@ main.skills .tabs {
   background-color: transparent;
   border: unset;
 }
+
+main.skills h3 {
+  text-align: center;
+}
 @media only screen and (min-width: 320px) {
   main.skills .heading {
     width: 100vw;

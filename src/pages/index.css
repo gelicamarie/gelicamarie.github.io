@@ -1,5 +1,7 @@
 .wrapper {
   height: calc(100vh - 5rem);
+  display: flex;
+  justify-content: center;
 }
 
 .mid-wrap {
@@ -9,6 +11,9 @@
   flex-direction: column;
 }
 
+.bkg-wrapper {
+  position: relative;
+}
 .bkg {
   position: fixed;
   z-index: -1;

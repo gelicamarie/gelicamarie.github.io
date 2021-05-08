@@ -1,14 +1,14 @@
-main h1 {
+main.error h1 {
   font-style: italic;
   text-align: center;
 }
 
-main h3 {
+main.error h3 {
   text-align: center;
   font-weight: 300;
 }
 
-main .wrapper {
+main.error .wrapper {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -17,7 +17,7 @@ main .wrapper {
 
 /* Small Screen Size */
 @media only screen and (max-width: 767px) {
-  main svg {
+  main.error svg {
     width: 20rem;
     height: 25rem;
   }
@@ -25,13 +25,13 @@ main .wrapper {
 
 /* Desktop Medium */
 @media only screen and (min-width: 768px) {
-  main svg {
+  main.error svg {
     margin: 2rem 0;
   }
 }
 
 @media only screen and (min-width: 2000px) {
-  main svg {
+  main.error svg {
     margin: 2rem 0;
     width: 40rem;
     height: 45rem;
