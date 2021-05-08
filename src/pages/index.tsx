@@ -4,7 +4,6 @@ import { useWindowWidth } from '@react-hook/window-size'
 
 import SEO from '../components/Seo'
 import Navbar from '../components/Navbar'
-import Line from '../components/Line'
 import Ellipse from '../components/Ellipse'
 
 import About from '../components/About'
@@ -14,9 +13,9 @@ import './index.css'
 
 const MobileName = () => (
   <div className="name">
-    <Line className="line" />
+    <hr className="line" />
     <h1>Angelica Turla</h1>
-    <Line className="line" />
+    <hr className="line" />
   </div>
 )
 
@@ -27,7 +26,7 @@ const DesktopName = () => (
       Angelica Turla
       <Ellipse className="circle" />
     </h1>
-    <Line className="line" />
+    <hr className="line" />
     <h1>Personal Portfolio</h1>
   </div>
 )
@@ -56,15 +55,14 @@ const Home = () => {
       <Navbar />
       <main>
         <div className="wrapper">
-          <div className="mid-wrap">
+          <GatsbyImage className="bkg" alt="blue image" image={getImage( bkg )} />
 
-            <GatsbyImage className="bkg" alt="blue image" image={getImage( bkg )} />
-            <div className="collage-wrapper">
-              <GatsbyImage className="collage" alt="Collage" image={getImage( collage )} />
-            </div>
-
-            <Name />
+          <div className="collage-wrapper">
+            <GatsbyImage className="collage" alt="Collage" image={getImage( collage )} />
           </div>
+
+          <Name />
+
         </div>
         <About />
         <Skills />
