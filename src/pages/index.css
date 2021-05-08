@@ -10,7 +10,7 @@
   position: fixed !important;
   z-index: -1;
   margin: auto;
-  opacity: 0.4;
+  opacity: 0.3;
 }
 main div.name {
   display: flex;
@@ -131,7 +131,7 @@ main div.name {
   }
 
   main div.name {
-    margin-top: 5rem;
+    margin-top: 8vw;
     height: fit-content;
     width: fit-content;
   }
@@ -158,16 +158,21 @@ main div.name {
   .collage-wrapper {
     width: 40rem;
     height: 40rem;
+    margin-top: 13rem;
   }
   .bkg {
     width: 18%;
+  }
+
+  main div.name {
+    margin-top: 1rem;
   }
 
   main .name > h1 > svg.circle {
     position: absolute;
     width: 18rem !important;
     height: 18rem !important;
-    top: -14rem;
+    top: -13rem;
     left: 1rem;
     z-index: -1;
   }
