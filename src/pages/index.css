@@ -11,14 +11,11 @@
   flex-direction: column;
 }
 
-.bkg-wrapper {
-  position: relative;
-}
 .bkg {
   position: fixed;
   z-index: -1;
   width: 20%;
-  opacity: 20%;
+  opacity: 0.5;
 }
 main div.name {
   display: flex;
@@ -31,21 +28,19 @@ main div.name {
   main div.name .line {
     width: 14vw;
   }
+
   .bkg {
     width: 50%;
     z-index: -2;
   }
-  .bkg-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 20vw 0 -10vw;
-  }
+
   .collage-wrapper {
+    position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 70%;
+    margin: 0 0 10vw;
   }
 
   .collage {
@@ -62,7 +57,7 @@ main div.name {
   }
 
   main div.name {
-    margin-top: -8vw;
+    margin-top: 0;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
@@ -76,19 +71,13 @@ main div.name {
     margin: 0 1rem;
   }
 
-  .bkg-wrapper {
-    margin: 20vw 0 0;
-  }
   .collage-wrapper {
-    width: 60%;
+    width: 55%;
+    margin: 0 0 10vw;
   }
 
   .collage img {
     z-index: -1;
-  }
-
-  main div.name {
-    margin-top: 8rem;
   }
 }
 
@@ -109,10 +98,9 @@ main div.name {
     width: 25%;
     z-index: -2;
   }
-  .bkg-wrapper {
-    margin: 10vw 0 0;
-  }
+
   .collage-wrapper {
+    margin: 0 0 15vw;
     width: 30%;
   }
 

@@ -86,7 +86,7 @@ const Skills = () => {
   return (
     <>
       <SEO title="Skills" />
-      <main id="skills" className=" skills">
+      <main id="skills" className="skills">
         <div className="container">
           <div className="heading">
             <hr className="line" />
