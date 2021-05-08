@@ -114,12 +114,12 @@ main.about p {
   }
 
   main.about .heading > svg.circle {
-    width: 250px;
-    height: 250px;
+    width: 240px;
+    height: 240px;
   }
 
   main.about p {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     line-height: 1.9rem;
   }
 }

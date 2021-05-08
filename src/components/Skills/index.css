@@ -10,7 +10,7 @@ main.skills h1 > svg.circle {
 }
 
 main.skills .heading {
-  justify-items: center;
+  display: flex;
   align-items: center;
   flex-direction: row;
 }
@@ -28,22 +28,6 @@ main.skills ul {
   font-weight: 200;
 }
 
-[data-reach-accordion-panel] {
-  /* styles for all accordion panels */
-}
-[data-reach-accordion-panel][data-state='open'] {
-  /* styles for all open accordion panels */
-}
-[data-reach-accordion-panel][data-state='collapsed'] {
-  /* styles for all collapsed accordion panels */
-}
-[data-reach-accordion-panel][data-disabled] {
-  /* styles for all disabled accordion panels */
-}
-
-main.skills .tabs {
-  margin: 2vw 0;
-}
 [data-reach-accordion-button] {
   font-size: 1.5rem;
   cursor: pointer;
@@ -124,9 +108,6 @@ main.skills h3 {
     font-size: 1rem;
   }
 
-  main.skills .tabs {
-    margin: 0 0;
-  }
   main.skills h1 > svg.circle {
     width: 18vw;
     height: 18vw;
@@ -139,8 +120,13 @@ main.skills h3 {
 }
 
 @media only screen and (min-width: 1200px) {
+  main.skills .wrapper {
+    margin: auto;
+    width: 90%;
+  }
+
   main.skills .heading {
-    max-width: 70vw;
+    width: 100%;
   }
   [data-reach-accordion] {
     display: flex;
@@ -149,22 +135,22 @@ main.skills h3 {
   }
 
   main.skills h1 {
+    margin-bottom: 1rem;
     font-size: 4rem;
   }
   main.skills .line {
-    width: 80vw;
+    width: 50vw;
   }
 
   main.skills h1 > svg.circle {
     width: 16rem;
     height: 16rem;
-    top: -8vw;
+    top: -9vw;
     left: 10vw;
   }
 
   main.skills .tabs {
-    height: 20rem;
-    margin: -3rem 4rem 10rem 4rem;
+    width: 100%;
   }
 
   [data-reach-accordion-button] {
@@ -186,7 +172,7 @@ main.skills h3 {
   main.skills h1 > svg.circle {
     width: 16rem;
     height: 16rem;
-    top: -6vw;
+    top: -4vw;
     left: 8vw;
   }
   main.skills ul > li {

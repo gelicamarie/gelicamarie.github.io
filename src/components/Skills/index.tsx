@@ -88,14 +88,16 @@ const Skills = () => {
       <SEO title="Skills" />
       <main id="skills" className="skills">
         <div className="container">
-          <div className="heading">
-            <hr className="line" />
-            <h1>Skills & frameworks
-              <Ellipse className="circle" />
-            </h1>
+          <div className="wrapper">
+            <div className="heading">
+              <hr className="line" />
+              <h1>Skills & frameworks
+                <Ellipse className="circle" />
+              </h1>
+            </div>
+            {isMultiple && <Tabs multiple /> }
+            {!isMultiple && <Tabs /> }
           </div>
-          {isMultiple && <Tabs multiple /> }
-          {!isMultiple && <Tabs /> }
         </div>
       </main>
     </>
