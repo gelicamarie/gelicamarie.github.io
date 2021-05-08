@@ -8,6 +8,7 @@ import Ellipse from '../components/Ellipse'
 
 import About from '../components/About'
 import Skills from '../components/Skills'
+import Work from '../components/Work'
 
 import './index.css'
 
@@ -66,6 +67,7 @@ const Home = () => {
         </div>
         <About />
         <Skills />
+        <Work />
       </main>
     </>
   )

@@ -29,7 +29,7 @@ main.skills ul {
 }
 
 [data-reach-accordion-button] {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   cursor: pointer;
   text-transform: lowercase;
   font-style: italic;
@@ -48,15 +48,16 @@ main.skills h3 {
     width: 100vw;
     height: 20vw;
     display: flex;
+    margin-top: 5rem;
   }
   main.skills h1 {
-    font-size: 6vw;
+    font-size: 7vw;
     width: min-content;
-    margin: 0 1vw 0 3vw;
+    margin: 0 0.2rem 0 0;
   }
 
   main.skills .line {
-    width: 40vw;
+    width: 35vw;
   }
 
   main.skills h1 > svg.circle {
@@ -68,17 +69,14 @@ main.skills h3 {
 
   main.skills ul > li {
     margin: 0.5rem 0.5rem 0 0;
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
 }
 
 @media only screen and (min-width: 481px) {
-  main.skills .heading {
-    margin-top: 4rem;
-  }
   main.skills h1 {
-    font-size: 5.5vw;
-    margin: 0 2rem 0 0;
+    font-size: 2.2rem;
+    margin: 0 1rem 0 0;
   }
 
   main.skills .line {
@@ -92,7 +90,7 @@ main.skills h3 {
   }
   main.skills ul > li {
     margin: 0.5rem 0.5rem 0 0;
-    font-size: 0.9rem;
+    font-size: 1.1rem;
   }
 
   [data-reach-accordion-button] {
@@ -102,10 +100,13 @@ main.skills h3 {
 
 @media only screen and (min-width: 769px) {
   main.skills h1 {
-    font-size: 5vw;
+    font-size: 3rem;
+  }
+  main.skills .line {
+    width: 60vw;
   }
   main.skills ul > li {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 
   main.skills h1 > svg.circle {
@@ -136,7 +137,7 @@ main.skills h3 {
 
   main.skills h1 {
     margin-bottom: 1rem;
-    font-size: 4rem;
+    font-size: 3.5rem;
   }
   main.skills .line {
     width: 50vw;
@@ -145,7 +146,7 @@ main.skills h3 {
   main.skills h1 > svg.circle {
     width: 16rem;
     height: 16rem;
-    top: -9vw;
+    top: -5vw;
     left: 10vw;
   }
 
@@ -159,7 +160,7 @@ main.skills h3 {
 
   main.skills ul > li {
     margin: 0.8rem 0.9rem 0 0;
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 }
 
@@ -169,6 +170,9 @@ main.skills h3 {
     margin: -7rem 4rem 15rem 4rem;
   }
 
+  main.skills .heading {
+    margin: 2rem 0;
+  }
   main.skills h1 > svg.circle {
     width: 16rem;
     height: 16rem;
@@ -176,6 +180,6 @@ main.skills h3 {
     left: 8vw;
   }
   main.skills ul > li {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
 }
