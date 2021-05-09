@@ -33,6 +33,7 @@ main div.name {
     justify-content: center;
     align-items: center;
     width: 70%;
+    margin: 2rem 0;
   }
 
   .collage {
@@ -45,7 +46,7 @@ main div.name {
   }
 
   main div.name h1 {
-    font-size: 6vw;
+    font-size: 7vw;
   }
 
   main div.name {
@@ -57,7 +58,7 @@ main div.name {
 
 @media only screen and (min-width: 481px) {
   main div.name .line {
-    width: 17vw;
+    width: 15vw;
     height: min-content;
     margin: 0 1rem;
   }
