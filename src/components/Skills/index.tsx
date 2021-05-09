@@ -17,12 +17,11 @@ const TECHNICAL_SKILLS = [
   'JavaScript/TypeScript',
   'C / C++',
   'Java',
-  'SQL',
+  'SQL and SQLite',
   'Scheme',
   'Python',
   'Swift',
-  'MongoDB',
-  'SQLite',
+  'MongoDB',,
   'Git',
 
 ]
