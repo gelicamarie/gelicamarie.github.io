@@ -9,7 +9,7 @@ import Ellipse from '../components/Ellipse'
 import About from '../components/About'
 import Skills from '../components/Skills'
 import Work from '../components/Work'
-
+import Contact from '../components/Contact'
 import './index.css'
 
 const MobileName = () => (
@@ -68,6 +68,7 @@ const Home = () => {
         <About />
         <Skills />
         <Work />
+        <Contact />
       </main>
     </>
   )
