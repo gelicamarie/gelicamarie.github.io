@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react'
 import { Cross as Toggle } from 'hamburger-react'
-import { Link } from 'gatsby'
 import { useWindowWidth } from '@react-hook/window-size'
 import { Transition } from 'react-transition-group'
 import { motion } from 'framer-motion'
+import Link from '../Link'
 
 import './index.css'
 

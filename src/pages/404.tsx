@@ -1,4 +1,4 @@
-import { Link } from 'gatsby'
+import Link from '../components/Link'
 import SEO from '../components/Seo'
 import Ooops from '../components/Ooops'
 import './error.css'

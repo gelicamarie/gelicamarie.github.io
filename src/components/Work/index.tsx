@@ -1,12 +1,12 @@
+import Link from '../Link'
 import SEO from '../Seo'
-import Ellipse from '../Ellipse'
+
 import './index.css'
-import { Link } from 'gatsby'
 
 const EXPERIENCES = [
   { label: 'Ambassadors Media', summary: 'Platform for content creators', to: 'https://ambassadors.media/' },
-  { label: 'Side Projects', summary: 'School and personal side projects', to: '/' },
-  { label: 'Technovation', summary: 'team tech-entrepreneurship competition', to: '/' },
+  { label: 'Side Projects', summary: 'School and personal side projects', to: '/work/#sideprojects' },
+  { label: 'Technovation', summary: 'team tech-entrepreneurship competition', to: '/work/#technovation' },
 ]
 const Work = () => (
   <>
