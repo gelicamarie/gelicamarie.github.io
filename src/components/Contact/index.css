@@ -14,13 +14,12 @@ main.contact h2 {
   background-color: var(--color-theme-blue-0);
 }
 
-main.contact h2:nth-child(even) {
+main.contact a:nth-child(even) > h2 {
   background-color: var(--color-theme-grey-1);
-  text-align: right;
 }
-
-main.contact h2:nth-child(even) > a {
+main.contact a:nth-child(even) {
   color: black;
+  text-align: right;
 }
 
 main.contact .disc {
@@ -39,8 +38,8 @@ main.contact .disc:hover p {
   color: var(--color-theme-white);
 }
 
-main.contact h2:nth-child(even) > a:hover {
-  color: var(--color-theme-blue-1);
+main.contact a:nth-child(even):hover {
+  color: var(--color-theme-blue-0);
 }
 @media only screen and (min-width: 320px) {
   main.contact h2 {

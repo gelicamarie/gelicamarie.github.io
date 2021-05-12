@@ -7,8 +7,8 @@ import Navbar from '../components/Navbar'
 import Ellipse from '../components/Ellipse'
 
 import About from '../components/About'
-import Skills from '../components/Skills'
 import Work from '../components/Work'
+import Skills from '../components/Skills'
 import Contact from '../components/Contact'
 import './index.css'
 
@@ -66,8 +66,8 @@ const Home = () => {
 
         </div>
         <About />
-        <Skills />
         <Work />
+        <Skills />
         <Contact />
       </main>
     </>
