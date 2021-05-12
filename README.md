@@ -9,7 +9,7 @@
     <li> <a href="https://reactjs.org/">React</a></li>
     <li> <a href="https://www.typescriptlang.org/"> TypeScript</a> </li>
     <li> HTML, CSS </li>
-  <ul>
+  </ul>
 
     <p align="center">
     <img src="https://github.com/gelicamarie/gelicamarie.github.io/blob/main/src/content/demo.png" width="800" >
