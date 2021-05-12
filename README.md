@@ -11,9 +11,10 @@
     <li> HTML, CSS </li>
   </ul>
 
+<div>
     <p align="center">
     <img src="https://github.com/gelicamarie/gelicamarie.github.io/blob/main/src/content/demo.png" width="800" >
     </p>
-    (Still in Progress)
+    <p>(Still in Progress)</p>
     <p> Portfolio / Resume to keep track of all my past and new accomplishments
-
+</div>
