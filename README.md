@@ -4,7 +4,7 @@
   <p> Technologies:  </p>
 
 </div>
-  <ul type="none">
+  <ul type="none" align="center">
     <li> <a href= "https://www.gatsbyjs.com/">Gatsby </a></li> 
     <li> <a href="https://reactjs.org/">React</a></li>
     <li> <a href="https://www.typescriptlang.org/"> TypeScript</a> </li>
