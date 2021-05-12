@@ -1,9 +1,14 @@
+main.about {
+  color: #f8f6f1;
+}
 main.about .heading {
   display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0;
 }
-main.about h2 {
+
+main.about span {
   text-transform: uppercase;
   padding: 0;
   text-align: left;
@@ -32,12 +37,33 @@ main.about p {
   font-weight: 200;
 }
 
+main.about .Typist .Cursor--blinking {
+  opacity: 1;
+  animation: blink 0.8s linear infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 @media only screen and (min-width: 320px) {
-  main.about h2 {
-    font-size: 1.8rem;
+  main.about span {
+    font-size: 1.2rem;
     margin-left: 1rem;
     margin-right: auto;
-    width: 11rem;
+    width: 12rem;
+  }
+
+  main.about .heading {
+    width: 20rem;
   }
 
   main.about .heading > svg.circle {
@@ -61,8 +87,19 @@ main.about p {
     font-size: 1rem;
     line-height: 1.2rem;
   }
+
+  main.about a {
+    text-decoration: underline;
+  }
 }
 @media only screen and (min-width: 481px) {
+  main.about span {
+    font-size: 1.5rem;
+  }
+
+  main.about .heading {
+    width: inherit;
+  }
   main.about .heading > svg.circle {
     width: 150px;
     height: 150px;
@@ -74,9 +111,8 @@ main.about p {
   }
 }
 @media only screen and (min-width: 769px) {
-  main.about h2 {
-    font-size: 3rem;
-    width: 30rem;
+  main.about span {
+    font-size: 2.5rem;
   }
 
   main.about .heading > svg.circle {
@@ -87,7 +123,7 @@ main.about p {
   main.about .grid-container {
     margin-top: 2rem;
     display: grid;
-    grid-template-columns: 18rem 18rem;
+    grid-template-columns: 19rem 19rem;
     grid-template-rows: 15rem;
     gap: 0 2rem;
     grid-template-areas: '. .';
@@ -104,12 +140,15 @@ main.about p {
 }
 
 @media only screen and (min-width: 1200px) {
-  main.about h2 {
-    font-size: 4rem;
+  main.about span {
+    font-size: 3rem;
   }
 
+  main.about h4 {
+    font-size: 2rem;
+  }
   main.about .grid-container {
-    grid-template-columns: 30em 30rem;
+    grid-template-columns: 30rem 30rem;
     gap: 0 4rem;
   }
 
@@ -125,6 +164,9 @@ main.about p {
 }
 
 @media only screen and (min-width: 1900px) {
+  main.about span {
+    font-size: 4rem;
+  }
   main.about h4 {
     font-size: 3rem;
   }

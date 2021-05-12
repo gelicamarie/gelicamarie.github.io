@@ -15,6 +15,7 @@
   "dependencies": {
     "@reach/accordion": "^0.15.1",
     "@react-hook/window-size": "^3.0.7",
+    "aws-amplify": "^4.0.0",
     "classnames": "^2.2.6",
     "framer-motion": "^4.1.11",
     "gatsby": "^3.1.1",
@@ -31,7 +32,9 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-helmet": "^6.1.0",
-    "react-transition-group": "^4.4.1"
+    "react-scroll-motion": "^0.2.1",
+    "react-transition-group": "^4.4.1",
+    "react-typist": "^2.0.5"
   },
   "devDependencies": {
     "@types/classnames": "^2.3.1",
