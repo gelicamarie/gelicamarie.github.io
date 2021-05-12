@@ -1,4 +1,4 @@
-![Animoji] (https://github.com/gelicamarie/gelicamarie.github.io/blob/main/src/content/Animoji.png)
+![Animoji] (main/src/content/Animoji.png?raw=true "Animoji")
 ## 👾 Personal Website
 
 1.  **Personal Website: In Progress.**
