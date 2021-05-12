@@ -12,7 +12,7 @@
 </div>
     (Still in Progress)
     <p align="center">
-    <img src="https://github.com/gelicamarie/gelicamarie.github.io/blob/main/src/content/demo.png" width="800" height="750">
+    <img src="https://github.com/gelicamarie/gelicamarie.github.io/blob/main/src/content/demo.png" width="800" >
     </p>
     <p> Portfolio / Resume to keep track of all my past and new accomplishments
 
