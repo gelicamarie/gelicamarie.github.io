@@ -71,6 +71,8 @@ main.work h4 {
   main.work .wrapper {
     display: flex;
     flex-direction: row;
+    justify-content: center;
+
     padding: 8vw 0;
     width: 70vw;
   }

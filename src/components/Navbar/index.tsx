@@ -10,8 +10,8 @@ import './index.css'
 const MENU = [
   { label: 'Artwork', to: '/artwork' },
   { label: 'About', to: '/#about' },
-  { label: 'Skills', to: '/#skills' },
   { label: 'Work', to: '/#work' },
+  { label: 'Skills', to: '/#skills' },
   { label: 'Contact', to: '/#contact' },
 ]
 

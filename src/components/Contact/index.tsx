@@ -22,7 +22,7 @@ const Contact = () => (
               <p className="hide">gel#9602</p>
             </h2>
             {CONTACTS.map( ( { label, to } ) => (
-              <h2><Link to={to}>{label}</Link></h2>
+              <Link to={to}><h2>{label}</h2></Link>
             ) )}
           </div>
         </div>

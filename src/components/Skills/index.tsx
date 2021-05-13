@@ -32,6 +32,7 @@ const SOFT_SKILLS = [
   'Collaborative mindset',
   'Team Player',
   'Time Management for efficient work',
+  'Introspective',
 ]
 
 const FRAMEWORKS = [
