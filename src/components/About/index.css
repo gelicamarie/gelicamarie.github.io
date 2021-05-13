@@ -56,7 +56,7 @@ main.about .Typist .Cursor--blinking {
 
 @media only screen and (min-width: 320px) {
   main.about span {
-    font-size: 1.2rem;
+    font-size: 2rem;
     margin-left: 1rem;
     margin-right: auto;
     width: 12rem;
@@ -94,11 +94,11 @@ main.about .Typist .Cursor--blinking {
 }
 @media only screen and (min-width: 481px) {
   main.about span {
-    font-size: 1.5rem;
+    font-size: 2.5rem;
   }
 
   main.about .heading {
-    width: inherit;
+    width: 30rem;
   }
   main.about .heading > svg.circle {
     width: 150px;
@@ -112,7 +112,11 @@ main.about .Typist .Cursor--blinking {
 }
 @media only screen and (min-width: 769px) {
   main.about span {
-    font-size: 2.5rem;
+    font-size: 2.8rem;
+  }
+
+  main.about .heading {
+    width: inherit;
   }
 
   main.about .heading > svg.circle {
