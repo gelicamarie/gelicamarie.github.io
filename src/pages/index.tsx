@@ -1,17 +1,18 @@
+import { Suspense, lazy } from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import { useWindowWidth } from '@react-hook/window-size'
-import { Animator, ScrollContainer, ScrollPage, batch, Fade, MoveOut, Sticky } from 'react-scroll-motion'
 
 import SEO from '../components/Seo'
 import Navbar from '../components/Navbar'
 import Ellipse from '../components/Ellipse'
 
-import About from '../components/About'
 import Work from '../components/Work'
 import Skills from '../components/Skills'
 import Contact from '../components/Contact'
 import './index.css'
+
+const About = lazy( () => import( '../components/About' ) )
 
 const MobileName = () => (
   <div className="name">
@@ -50,6 +51,8 @@ const Home = () => {
   ` )
   const width = useWindowWidth()
   const Name = () => ( width < 769 ? <MobileName /> : <DesktopName /> )
+  const isSSR = typeof window === 'undefined'
+
   return (
     <>
       <SEO title="Home" />
@@ -68,7 +71,11 @@ const Home = () => {
 
         </div>
 
-        <About />
+        {!isSSR && (
+        <Suspense fallback={<div>loading...</div>}>
+          <About />
+        </Suspense>
+        )}
 
         <Work />
         <Skills />
