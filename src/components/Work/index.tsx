@@ -5,7 +5,7 @@ import './index.css'
 
 const EXPERIENCES = [
   { label: 'Ambassadors Media', summary: 'Platform for content creators', to: 'https://ambassadors.media/' },
-  { label: 'Side Projects', summary: 'School and personal side projects', to: '/work/#sideprojects' },
+  { label: 'Side Projects', summary: 'School and personal side projects', to: 'https://github.com/gelicamarie' },
   { label: 'Technovation', summary: 'team tech-entrepreneurship competition', to: '/work/#technovation' },
 ]
 const Work = () => (
